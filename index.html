@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C L I M A</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <a href="#" class="logo__principal">C L I M A</a>
+      <button type="button" class="btn__menu">
+        <img
+          src="./img/header/menu/menu__hamburguesa.svg"
+          alt="menu hamburguesa"
+          class="menu"
+        />
+      </button>
+      <button type="button" class="btn__salir">
+        <img
+          src="./img/header/menu/menu__x.svg"
+          alt="salir de menu hamburguesa"
+          class="menu"
+        />
+      </button>
+    </header>
+      <!-- NAV -->
+      <nav class="ver__nav">
+        <ul>
+          <li class="nav__opciones"><a href="#semana" class="opc">PRONÓSTICO</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">DATOS</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">SERVICIOS</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">COMUNICACIÓN</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">NOSOTROS</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">SATÉLITES</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">MODELOS</a></li>
+          <li class="nav__opciones"><a href="#" class="opc">MUNDO</a></li>
+        </ul>
+      </nav>   
+    <!-- MAIN -->
+    <main>
+
+      <!-- SECCION PRINCIPA L-->
+      <section class="principal">
+        <!-- CONATINER -->
+        <div class="container">
+          <!-- CARD DEL CLIMA -->
+          <div class="card__clima">
+            <!-- APARTADO DE CIUDAD Y TEXTO DE TEMPERATURA -->
+            <div class="ciudad__tiempo">
+                <div class="text__ciudadcont">
+                    <p class="ciudad__text">Buenos Aires</p>
+                </div>
+              <p class="tiempo__text">Despejado</p>
+            </div>
+            <!-- APARTADO IMAGEN DEL TIEMPO  -->
+            <div class="img__tiempo">
+                <div class="img__cont">
+                    <img src="./img/dia-noche/dia.svg" alt="" class="img__tiempo">
+                </div>   
+            </div>
+            <!-- APARTADO TEMPERATURA -->
+            <div class="temperatura">
+              <p class="temperatura__text">12°</p>
+            </div>
+            <!-- APARTADO MAX/MIN-->
+            <div class="max__min">
+              <!-- MAX/MIN CONTAINER -->
+              <div class="mm__cont">
+                <!-- MAX CONTAINER -->
+                <div class="max">
+                  <p class="max__text">max</p>
+                  <p class="max__num">14°</p>
+                </div>
+                <!-- MIN CONATINER -->
+                <div class="min">
+                  <p class="min__text">min</p>
+                  <p class="min__num">-2°</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCION TITULO -->
+      <section class="tit__cont">
+        <p class="titulo__semana">Clima de esta semana</p>
+        <a href="#semana" class="arrow__cont"><img src="./img/arrow/arrow__down.svg" alt="arrow down" class="arrow__down"></a>
+      </section>
+
+      <!-- SECCION SECUNDARIA -->
+      <section class="section__secundaria" id="semana">
+        <!-- CARD PRINCIPAL DE LA SECCION 2 -->
+        <div class="card__dias">
+          <!-- CONTAINER DE LA CARD -->
+          <div class="dias">
+            <p class="dia">Hoy</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/soleado.svg" alt="soleado" class="clima__mañana">
+              <img src="./img/clima/luna.svg" alt="despejado" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">-2°</p>
+              <p class="tarde">14°</p>
+            </div>
+          </div>
+          <div class="dias">
+            <p class="dia">martes</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/soleado.svg" alt="soleado" class="clima__mañana">
+              <img src="./img/clima/nublado.svg" alt="nublado" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">-4°</p>
+              <p class="tarde">12°</p>
+            </div>
+          </div>
+          <div class="dias">
+            <p class="dia">miercoles</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/soleado.svg" alt="soleado" class="clima__mañana">
+              <img src="./img/clima/nublado.svg" alt="nublado" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">0°</p>
+              <p class="tarde">11°</p>
+            </div>
+          </div>
+          <div class="dias">
+            <p class="dia">jueves</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/soleado.svg" alt="soleado" class="clima__mañana">
+              <img src="./img/clima/llovizna.svg" alt="llovizna" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">-2°</p>
+              <p class="tarde">12°</p>
+            </div>
+          </div>
+          <div class="dias">
+            <p class="dia">viernes</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/lluvia.svg" alt="lluvia" class="clima__mañana">
+              <img src="./img/clima/lluvia.svg" alt="lluvia" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">-3°</p>
+              <p class="tarde">11°</p>
+            </div>
+          </div>
+          <div class="dias">
+            <p class="dia">sabado</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/lluvia.svg" alt="lluvia" class="clima__mañana">
+              <img src="./img/clima/tormenta.svg" alt="tormenta" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">-4°</p>
+              <p class="tarde">8°</p>
+            </div>
+          </div>
+          <div class="dias">
+            <p class="dia">domingo</p>
+            <!--CONTENEDOR DE IMAGENES DEL CLIMA-->
+            <div class="clima__dia">
+              <img src="./img/clima/nublado.svg" alt="nublado" class="clima__mañana">
+              <img src="./img/clima/luna.svg" alt="despejado" class="clima__tarde">
+            </div>
+            <!--CONTENEDOR DE TEMPERATURA MAXIMA Y MINIMA-->
+            <div class="maxmin__dia">
+              <p class="mañana">3°</p>
+              <p class="tarde">18°</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer__cont">
+          <hr>
+          <a href="#" class="logo"><img src="./img/footer/instagram.svg" alt="instagram logo"></a>
+          <a href="#" class="logo"><img src="./img/footer/facebook.svg" alt="dacebook logo"></a>
+          <a href="#" class="log"><img src="./img/footer/x.png" alt="x logo"></a>
+          <hr>
+        </div>
+        <div class="footer__cont">
+          <p class="nombre__web">C L I M A</p>
+          <p class="copy">Copyright © 2024 clima.</p>
+          <div class="legal__cont">
+            <div class="legal__info__cont">
+              <a href="#" class="legal__info">Información legal</a>
+            </div>
+            <div class="pp__cont">
+              <a href="#" class="pp">Política de privacidad</a>
+            </div>      
+          </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="index.js"></script>
+
+  </body>
+</html>

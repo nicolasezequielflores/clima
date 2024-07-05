@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --principal-color: #e0e0e0;
+    --gray-color: #797979;
+    --black-color: #1a1919;
+    --dark-color: #202020;
+    --poppins-font: "Poppins", sans-serif;
+}
+
+/**************** CUSTOM P *******************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/**************** RESET *******************/
+
+body{
+    background: var(--principal-color);
+    font-family: var(--poppins-font);
+}
+
+html{
+    font-size: 13px;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/**************** HEADER *******************/
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/*LOGO  DE LA PAGINA*/
+
+.logo__principal{
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--principal-color);
+}
+
+/*BOTON DE MENU HAMBURGUESA*/
+
+.btn__menu{
+    border: 0;
+    background: 0;
+}
+
+.menu{
+    width: 30px;
+}
+
+.btn__salir{
+    border: 0;
+    background: 0;
+    display: none;
+}
+
+/**************** NAV *******************/
+
+ul{
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: start;
+    flex-direction: column;
+    background: var(--dark-color);
+    padding: 100px 20px;
+}
+
+.ver__nav{
+    margin: -60px 0 0 0;
+    width: 70%;
+    height: 110vh;
+    background: var(--black-color);
+    border-radius: 0 0 0 0;
+    position: fixed;
+    z-index: 2;
+    opacity: 0;
+    box-shadow: 3px 3px 10px var(--black-color);
+}
+
+.ver__nav.visible__menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*OPCIONES DEL NAV*/
+
+.nav__opciones{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0 30px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.opc{
+    width: inherit  ;
+    height: inherit;
+    font-size: 13px;
+    color: var(--principal-color);
+}
+
+/**************** MAIN *******************/
+
+main{
+    padding: 0 20px;
+}
+
+/**************** SECCION PRINCIPAL *******************/
+
+/*SECCION PRINCIPAL*/
+
+.principal{
+    width: 100%;
+    height: 100vh;
+}
+
+/*CONTAIANER*/
+
+.container{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CARD DEL CLIMA*/
+
+.card__clima{
+    width: 100%;
+    height: 60%;
+    background: var(--black-color);
+    border-radius: 40px;
+    display: grid;
+    grid-template-areas: 
+    "ciudadTiempo"
+    "iconoTiempo"
+    "NumeroTiempo"
+    "MaxminTiempo";
+    box-shadow: 3px 3px 10px var(--gray-color);
+}
+
+/*CIUDAD/TIEMPO*/
+
+.ciudad__tiempo{
+    grid-area: ciudadTiempo;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ciudad__text,
+.ciudad__tiempo{
+    color: var(--principal-color);
+}
+
+.ciudad__text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tiempo__text{
+    font-size: 17px;
+    font-weight: 200;
+}
+
+/*IMAGEN TIEMPO*/
+
+.img__tiempo{
+    grid-area: iconoTiempo;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin: 10px;
+}
+
+/*NUMERO TEMPARATURA*/
+
+.temperatura{
+    grid-area: NumeroTiempo;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.temperatura__text{
+    font-size: 50px;
+    font-weight: 200;
+    color: var(--principal-color);
+}
+
+/*MAX / MIN*/
+
+.max__min{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    grid-area: MaxminTiempo;
+}
+
+/*max/min container*/
+
+.mm__cont{
+    width: 50%;
+    height: 40%;
+    display: grid;
+    grid-template-areas: 
+    "max min";
+}
+
+/*max container*/
+
+.max{
+    grid-area: max;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid var(--gray-color);
+}
+
+.max__text,
+.max__num{
+    font-size: 15px;
+    color: var(--principal-color);
+}
+
+/*min container*/
+
+.min{
+    grid-area: min;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 1px solid var(--gray-color);
+}
+
+.min__text, 
+.min__num{
+    font-size: 15px;
+    color: var(--principal-color);
+}
+
+/**************** SECCION SECUNDARIA *******************/
+
+.section__secundaria{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* TITULO DE SECCION */
+
+.tit__cont{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--black-color);
+    padding: 0 20px;
+    border-radius: 50px;
+}
+
+.titulo__semana{
+    color: var(--black-color);
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.arrow__down{
+    width: 50px;
+    margin: 0;
+}
+
+/*CARD DE DIAS*/
+
+.card__dias{
+    width: 100%;
+    height: 80%;
+    margin: 60px 0 0 0;
+    background: var(--black-color);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    overflow: hidden;
+    box-shadow: 3px 3px 10px var(--gray-color);
+}
+
+.dias{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.dias:nth-child(7){
+    border: 0;
+}
+
+.dia{
+    width: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.dia,
+.mañana,
+.tarde{
+    color: var(--principal-color);
+}
+
+.clima__dia{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.maxmin__dia{
+    width: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/**************** FOOTER *******************/
+
+footer{
+    width: 100%;
+    height: 300px;
+    background: var(--black-color);
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow-x: hidden;
+}
+.footer__cont{
+    width: 100%;
+}
+
+/*PARTE 1 DEL FOOTER*/
+
+.footer__cont:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.logo{
+    margin: 0 20px 0 0;
+}
+
+hr{
+    width: 10%;
+    margin: 0 20px;
+    border-color: var(--principal-color);
+}
+
+/*PARTE 2 DEL FOOTER*/
+
+.footer__cont:nth-child(2){
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nombre__web{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--principal-color);
+}
+
+.copy{
+    color: var(--gray-color);
+    font-weight: 200;
+    margin: 5px;
+}
+
+.legal__cont{
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legal__info,
+.pp{
+    color: var(--principal-color);
+    text-decoration: underline;
+    padding: 0 5px;
+}
+
+.legal__info__cont{
+    width: 170px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-right: 1px solid var(--gray-color);
+}
+
+.pp__cont{
+    width: 170px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-left: 1px solid var(--gray-color);
+}
+
+
+/**************** MQUERYS *******************/
+
+@media screen and (min-width: 1024px) {
+
+    /* HEADER */
+
+    header{
+        height: 70px;
+        justify-content: center;
+    }
+    
+    /*LOGO  DE LA PAGINA*/
+
+    .logo__principal{
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 10px;
+        border: 1px solid var(--principal-color);
+        color: var(--principal-color);
+    }
+
+    /*BOTON DE MENU HAMBURGUESA*/
+
+    .btn__menu,
+    .menu,
+    .btn__salir{
+        display: none;
+    }
+ 
+    /* NAV */
+
+    .ver__nav{
+        overflow-x: hidden;
+        margin: 70px 0 0 0;
+        width: 100%;
+        height: 50px;
+        border-radius: 0;
+        position: fixed;
+        z-index: 1;
+        opacity: 1;
+        box-shadow: none;
+        background: var(--dark-color);
+
+    }
+
+    .ver__nav.visible__menu{
+        display: none;
+    }
+
+    ul{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background: none;
+        padding: 0 20px;
+    }
+
+    /*OPCIONES DEL NAV*/
+
+    .nav__opciones{
+        width: 110px;
+        height: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: none;
+    }
+
+    .opc{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--principal-color);
+        transition: 0.5s;
+    }
+
+    .opc:hover{
+        color: var(--gray-color);
+    }
+
+    /**************** MAIN *******************/
+
+    main{
+        padding: 0 20px;
+    }
+
+    /**************** SECCION PRINCIPAL *******************/
+
+    /*CARD DEL CLIMA*/
+
+    .card__clima{
+        margin: 120px 0 0 0;
+        width: 50%;
+        height: 70%;
+    }
+
+    /**************** SECCION TITULO *******************/
+
+    /* TITULO DE SECCION */
+
+    .tit__cont{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        border: none;
+        padding: 60px 0;
+    }
+
+    .titulo__semana{
+        color: var(--black-color);
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    /**************** SECCION SECUNDARIA *******************/
+
+    .card__dias{
+        width: 40%;
+        height: 70%;
+        margin: 120px 0 0 0;
+        background: var(--black-color);
+        border-radius: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        overflow: hidden;
+        box-shadow: 3px 3px 10px var(--gray-color);
+    }
+
+    /**************** FOOTER *******************/
+
+    .copy{
+        color: var(--gray-color);
+        font-weight: 300;
+        margin: 5px;
+    }
+    
+    
+
+   
+    }
